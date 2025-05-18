@@ -63,6 +63,7 @@ function Login(){
                         {...register("email", {
                             required: true,
                             validate: {
+                                // The validate function is used to validate the input. It takes a function that returns true or false as an argument.
                                 matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                             "Email address must be a valid address",
                             }
